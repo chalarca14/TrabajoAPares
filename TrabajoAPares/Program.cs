@@ -123,9 +123,9 @@
                         }
                         break;
                     case "11":
+                        reporte.MostrarCierreDiario(inventario);
                         salir = true; Console.WriteLine("👋 Cerrando aplicación...");
                         break;
-
 
                 }
             }
