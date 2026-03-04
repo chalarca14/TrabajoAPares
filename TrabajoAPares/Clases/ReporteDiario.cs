@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TrabajoAPares.Clases
 {
-    internal class ReporteDiario
+    public class ReporteDiario
     {
         private List<Venta> ventas = new List<Venta>();
         private int contadorVentas = 1;

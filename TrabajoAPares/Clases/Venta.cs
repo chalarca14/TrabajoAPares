@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TrabajoAPares.Clases
 {
-    internal class Venta
+    public class Venta
     {
         public int IdVenta {get; set;}
         public Producto Producto {get; set;}
@@ -23,7 +23,7 @@ namespace TrabajoAPares.Clases
         }
         public string MostrarInfo() 
         {
-            return $"Venta #{IdVenta} | {Fecha} | Producto: {ProductoVendido.Nombre} | Cantidad: {Cantidad} | Total: ${Total}"; 
+            return $"Venta #{IdVenta} | Producto: {Producto.Nombre} | Cantidad: {Cantidad} | Total: ${Total}"; 
         }
 
     }

@@ -9,6 +9,8 @@
         {
             // Creamos el inventario (tu clase)
             Inventario inventario = new Inventario();
+            // Creamos una instancia de ReporteDiario para evitar llamar métodos de instancia como estáticos
+            ReporteDiario reporte = new ReporteDiario();
             bool salir = false;
 
             while (!salir)
@@ -82,13 +84,13 @@
                         int idVenta = int.Parse(Console.ReadLine());
                         Console.Write("Ingrese cantidad: ");
                         int cantidadVenta = int.Parse(Console.ReadLine());
-                        ReporteDiario.RegistrarVenta(inventario, idVenta, cantidadVenta);
+                        reporte.RegistrarVenta(inventario, idVenta, cantidadVenta);
                         break;
                     case "7":
-                        ReporteDiario.MostrarVentas();
+                        reporte.MostrarVentas();
                         break;
                     case "8":
-                        ReporteDiario.ReporteTotal();
+                        reporte.ReporteTotal();
                         break;
                     case "9":
                         salir = true; Console.WriteLine("👋 Cerrando aplicación...");
