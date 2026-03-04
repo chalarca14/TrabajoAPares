@@ -71,6 +71,7 @@ namespace TrabajoAPares.Clases
         public List<Producto> ObtenerProductosConStockBajo(int umbral)
         {
             return productos.Where(p => p.StockBajo(umbral)).ToList();
+            
         }
     }
 }
