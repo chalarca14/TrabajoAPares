@@ -26,7 +26,7 @@
                 Console.WriteLine("7. Registrar Venta");
                 Console.WriteLine("8. Mostrar Ventas");
                 Console.WriteLine("9. Reporte Total de Ventas");
-                Console.WriteLine("<h2>10. Productos con Stock bajo</h2>");
+                Console.WriteLine("10. Productos con Stock bajo");
                 Console.WriteLine("11. Salir");
                 Console.Write("Seleccione una opción: ");
 
