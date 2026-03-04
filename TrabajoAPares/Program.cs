@@ -26,7 +26,8 @@
                 Console.WriteLine("7. Registrar Venta");
                 Console.WriteLine("8. Mostrar Ventas");
                 Console.WriteLine("9. Reporte Total de Ventas");
-                Console.WriteLine("10. Salir");
+                Console.WriteLine("<h2>10. Productos con Stock bajo</h2>");
+                Console.WriteLine("11. Salir");
                 Console.Write("Seleccione una opción: ");
 
                 string opcion = Console.ReadLine();
@@ -102,9 +103,6 @@
                         reporte.ReporteTotal();
                         break;
                     case "10":
-                        salir = true; Console.WriteLine("👋 Cerrando aplicación...");
-                        break;
-                    case "11":
                         int UMBRAL = 3;
 
                         List<Producto> productosBajoStock =
@@ -116,14 +114,16 @@
 
                             foreach (Producto p in productosBajoStock)
                             {
-                                Console.WriteLine($"Nombre: {p.Nombre} - Stock: {p.Stock}");
+                                Console.WriteLine($"Id: {p.Id} - Nombre: {p.Nombre} - Stock: {p.Stock}");
                             }
                         }
                         else
                         {
                             Console.WriteLine("No hay productos con stock bajo.");
                         }
-
+                        break;
+                    case "11":
+                        salir = true; Console.WriteLine("👋 Cerrando aplicación...");
                         break;
 
 
