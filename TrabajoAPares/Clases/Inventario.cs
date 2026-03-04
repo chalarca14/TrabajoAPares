@@ -49,6 +49,14 @@ namespace TrabajoAPares.Clases
                 p.ActualizarStock(cantidad);
             }
         }
+        public void ActualizarPrecio(int id, decimal nuevoPrecio) 
+        {
+            Producto p = BuscarPorId(id);
+            if (p != null) 
+            {
+                p.ActualizarPrecio(nuevoPrecio);
+            }
+        }
 
         // Mostrar todos los productos del inventario
         public void MostrarInventario()

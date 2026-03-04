@@ -95,6 +95,15 @@
                     case "9":
                         salir = true; Console.WriteLine("👋 Cerrando aplicación...");
                         break;
+                    case "10":
+                        // Actualizar stock
+                        Console.Write("Ingrese ID del producto: ");
+                        int idStoc = int.Parse(Console.ReadLine());
+                        Console.Write("Ingrese cantidad (+ para entrada, - para salida): ");
+                        decimal nuevoPrecio = int.Parse(Console.ReadLine());
+                        inventario.ActualizarPrecio(idStoc,nuevoPrecio );
+                        Console.WriteLine("✅ Stock actualizado.");
+                        break;
                 }
             }
         }
