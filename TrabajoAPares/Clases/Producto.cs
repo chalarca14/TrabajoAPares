@@ -29,7 +29,9 @@ namespace TrabajoAPares.Clases
         // cantidad puede ser positiva (entrada de inventario) o negativa (venta)
         public void ActualizarStock(int cantidad)
         {
+
             Stock += cantidad;
+
         }
 
         // Método para cambiar el precio del producto

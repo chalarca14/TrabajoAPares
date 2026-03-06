@@ -9,6 +9,8 @@
         {
             // Creamos el inventario (tu clase)
             Inventario inventario = new Inventario();
+            inventario.CargarJson();
+            inventario.GuardarJson();
             // Creamos una instancia de ReporteDiario para evitar llamar métodos de instancia como estáticos
             ReporteDiario reporte = new ReporteDiario();
             bool salir = false;
@@ -47,6 +49,8 @@
 
                         Producto nuevo = new Producto(id, nombre, precio, stock);
                         inventario.RegistrarProducto(nuevo);
+                        inventario.GuardarJson();
+                        
                         Console.WriteLine("✅ Producto registrado correctamente.");
                         break;
 
@@ -124,6 +128,7 @@
                         break;
                     case "11":
                         reporte.MostrarCierreDiario(inventario);
+                        inventario.MostrarJson();
                         salir = true; Console.WriteLine("👋 Cerrando aplicación...");
                         break;
 
